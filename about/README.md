@@ -23,3 +23,9 @@ models** in machine learning, analytics, and optimization, with a strong focus o
 - 🏫 **School Dropout Risk Prediction**  
   Interpretable risk prediction model using machine learning and
   SHAP-based explanations to support transparent decision-making
+
+  ➡️ Explore projects by domain:
+- [Data Science](data-science/)
+- [Optimization](optimization/)
+- [Business Analytics](business-analytics/)
+
