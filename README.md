@@ -19,13 +19,13 @@ models** in machine learning, analytics, and optimization, with a strong focus o
 - 📈 **Business Analytics**  
   Power BI, KPI-driven analysis, and decision dashboards
 
+## Explore by Domain
+- 📊 [Data Science](data-science/)
+- 🚚 [Optimization](optimization/)
+- 📈 [Business Analytics](business-analytics/)
+
 ## Featured Projects
 - 🏫 **School Dropout Risk Prediction**  
-  Interpretable risk prediction model using machine learning and
-  SHAP-based explanations to support transparent decision-making
-
-  ➡️ Explore projects by domain:
-- [Data Science](data-science/)
-- [Optimization](optimization/)
-- [Business Analytics](business-analytics/)
-
+  Interpretable risk prediction model using machine learning and SHAP-based
+  explanations to support transparent decision-making.  
+  👉 [Open the project](data-science/school-dropout-prediction/)
