@@ -1,78 +1,76 @@
 # School Dropout Risk Prediction  
-### Model Selection and Interpretability with SHAP
+### Interpretable Machine Learning for Risk-Oriented Decision Support
 
-## Overview
-This project focuses on predicting student dropout risk using machine learning models.
-Beyond predictive performance, the project emphasizes **model selection** and
-**interpretability**, relying on **SHAP values** to understand and justify model predictions.
+## Business Context
+School dropout represents a major societal and economic risk for educational
+institutions and public organizations. Early identification of at-risk students
+enables proactive interventions, optimized resource allocation, and measurable
+impact on long-term outcomes.
 
-## Objectives
-- Predict student dropout risk using supervised learning models
-- Compare multiple classifiers and select a robust model
-- Emphasize interpretability to support transparent decision-making
-- Ensure full reproducibility using a public dataset
+From a broader perspective, this problem is analogous to **risk prediction
+settings in finance and insurance**, where decisions must be both **accurate and
+explainable** to support accountability and governance requirements.
 
-## Models Evaluated
+## Project Objective
+The objective of this project is to develop an **interpretable risk prediction
+model** capable of identifying students with a high probability of dropout,
+while ensuring transparency and trust in the decision-making process.
+
+The project explicitly balances:
+- Predictive performance  
+- Model robustness  
+- Interpretability for decision support  
+
+## Modeling Strategy
+Several classification models were evaluated to assess their suitability for
+risk prediction:
+
 - Logistic Regression  
-- k-Nearest Neighbors (KNN)  
+- k-Nearest Neighbors (k-NN)  
 - Support Vector Machine (SVM)  
-- Neural Network (MLP)
+- Neural Networks (MLP)
+
+Models were compared using performance metrics adapted to imbalanced datasets
+(precision, recall, macro F1-score), reflecting real-world risk management
+constraints where false negatives and false positives carry different costs.
 
 ## Model Selection
-Models were compared using standard classification metrics:
-- Accuracy
-- Precision
-- Recall
-- F1-score
+Among the evaluated models, the **Support Vector Machine (SVM)** demonstrated the
+best overall balance between predictive accuracy and stability, making it the
+most appropriate candidate for deployment in a decision-support context.
 
-Among the evaluated models, the **SVM** achieved the best overall balance between
-performance and robustness, and was selected as the final model.
+## Model Interpretability (SHAP)
+A strong emphasis is placed on **model interpretability**, a critical requirement
+in regulated environments such as **finance, insurance, and public policy**.
 
-## Interpretability with SHAP
-To move beyond black-box predictions, **SHAP (SHapley Additive exPlanations)** was used to:
-- Quantify feature contributions at both global and local levels
-- Identify the most influential variables associated with dropout risk
-- Improve transparency and trust in model predictions
+To achieve this, **SHAP (SHapley Additive Explanations)** was used to:
+- Explain individual risk predictions at the observation level
+- Identify the key drivers contributing to elevated risk scores
+- Provide transparent and auditable insights for stakeholders
 
-This interpretability step is essential for real-world deployment, especially in decision-support and policy-driven environments.
+This approach ensures that model outputs can be **understood, justified, and
+communicated**, rather than treated as black-box decisions.
 
-## Dataset
-The dataset used in this project is **publicly available on Kaggle** and is included
-in this repository for full reproducibility:
+## Key Insights
+- Academic performance indicators (validated credits, grades) are the strongest
+  contributors to dropout risk
+- Age at enrollment and academic engagement play a significant secondary role
+- Interpretability enables targeted and explainable intervention strategies
 
-🔗 https://www.kaggle.com/datasets/syedfaizanalii/predict-students-dropout-and-academic-success
+## Business Value
+This project demonstrates how **interpretable machine learning models** can be
+used to support high-stakes decisions in risk-sensitive environments.
 
-**Source:**  
-Syed Faizan Alii – Kaggle
+The methodology and interpretability framework are directly transferable to
+applications such as:
+- Credit risk assessment  
+- Insurance underwriting  
+- Customer churn and retention modeling  
+- Compliance-driven predictive analytics  
 
-## Repository Structure
+## Data
+The dataset used in this project is publicly available on Kaggle:  
+https://www.kaggle.com/datasets/syedfaizanalii/predict-students-dropout-and-academic-success
 
-```text
-school-dropout-prediction/
-├── notebooks/
-│   └── Projet_de_session.ipynb
-├── report/
-│   └── Rapport_Projet_TOUYEM_BATIONO.pdf
-├── data/
-│   ├── Dropout_Data.csv
-│   └── README.md
-├── results/
-│   └── README.md
-└── README.md
-```
-## How to Reproduce
-1. Open the notebook located in `notebooks/`
-2. Ensure required Python libraries are installed
-3. Run all cells sequentially
-4. Review model evaluation and SHAP interpretability outputs
-
-## Key Takeaways
-- Model performance alone is insufficient without interpretability
-- SHAP provides actionable insights into dropout risk factors
-- Interpretable machine learning supports transparent and responsible decision-making
-
-## Author
-**Hilaire Touyem**  
-Data Science & Optimization
-
-
+## Technologies
+**Python · Machine Learning · Risk Modeling · SVM · SHAP · Scikit-learn**
